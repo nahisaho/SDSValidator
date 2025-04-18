@@ -111,6 +111,15 @@ class SDSValidator:
                     ))
                     return
                 rows = list(reader)
+                
+                # 空の行（すべての値が空または空白文字のみの行）をフィルタリング
+                filtered_rows = []
+                for row in rows:
+                    # 全ての値が空または空白のみの場合はスキップ
+                    if all(not value.strip() for value in row.values()):
+                        continue
+                    filtered_rows.append(row)
+                rows = filtered_rows
 
             cleaned = []
             seen = set()
