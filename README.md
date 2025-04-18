@@ -1,4 +1,4 @@
-# SDS CSV バリデーションツール
+S CSV バリデーションツール
 
 Microsoft School Data Sync (SDS) V2.1 CSV ファイル形式のバリデーションを行うPythonツールです。
 
@@ -37,7 +37,7 @@ Microsoft School Data Sync (SDS) V2.1 CSV ファイル形式のバリデーシ�
 
 1. 必要なPythonパッケージのインストール：
 ```bash
-pip install phonenumbers pytest colorama
+pip install -r requirements.txt
 ```
 
 2. リポジトリのクローン：
