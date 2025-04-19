@@ -116,7 +116,7 @@ class SDSValidator:
                 filtered_rows = []
                 for row in rows:
                     # 全ての値が空または空白のみの場合はスキップ
-                    if all(not value.strip() for value in row.values()):
+                    if all(not value or not value.strip() if value is not None else True for value in row.values()):
                         continue
                     filtered_rows.append(row)
                 rows = filtered_rows
